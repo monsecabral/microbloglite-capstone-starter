@@ -1,8 +1,10 @@
 /* auth.js provides LOGIN-related functions */
 
+// DELETE TOKEN!!!!!!!!!!!!!
+// "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1jYWJyYWwiLCJpYXQiOjE3MTg5OTY5MzksImV4cCI6MTcxOTA4MzMzOX0.BNQopWYa_1NNXnddQE_TC32iq0mx8EE50kH3dhlFbKk"
+
 "use strict";
 
-const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
 // Backup server (mirror):   "https://microbloglite.onrender.com"
 
 // NOTE: API documentation is available at /docs 
