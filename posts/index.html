@@ -22,7 +22,7 @@
     <title>/POSTS</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
-    <script src="../auth.js"></script>
+    <script src="../scripts/auth.js"></script>
     <script>
         if (isLoggedIn() === false) window.location.replace("/");
     </script>
@@ -33,11 +33,19 @@
         <h1>POSTS PAGE</h1>
     </header>
 
-    <main></main>
+    <main>
+<div>
+    <button id="logoutButton">Logout</button>
+</div>
+
+<!-- Card -->
+<div id="card-container"></div>
+
+    </main>
 
     <footer></footer>
 
     <!-- Page-specific code -->
-    <script src="./posts.js"></script>
+    <script src="posts/posts.js"></script>
 </body>
 </html>

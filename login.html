@@ -29,7 +29,7 @@
         <title>Login to the Microblog Network!</title>
     
         <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
-        <script src="./auth.js"></script>
+        <script src="scripts/auth.js"></script>
         <script>
             if (isLoggedIn() === true) window.location.replace("/posts");
         </script>
@@ -177,16 +177,16 @@
 
             <!-- Login form -->
             <main class="form-signin w-100 m-auto">
-                <form>
+                <form id = "login">
                     <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
                     <h1 class="h3 mb-3 fw-normal">Login</h1>
 
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="usernameField" placeholder="name@example.com">
+                        <input  id="usernameField" type="text" class="form-control" placeholder="name@example.com">
                         <label for="floatingInput">Username</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="passwordField" placeholder="Password">
+                        <input id="passwordField" type="password" class="form-control"  placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
 
@@ -209,7 +209,8 @@
                 crossorigin="anonymous"></script>
             <!-- scripts -->
              <script src="scripts/login.js"></script>
-            <script src="scripts/landing.js"></script>
+
+            
     </body>
 
 </html>
