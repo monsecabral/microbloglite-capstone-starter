@@ -1,25 +1,73 @@
-html,
-body {
-  height: 100%;
-}
-
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
-}
-
-.form-signin .form-floating:focus-within {
+body{
+  background-image: linear-gradient(pink,#d896ff ,pink,#d896ff , pink);
+  background-size: 800% 800%;
+  animation: gradientAnimation 40s ease infinite;
   z-index: 2;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+@keyframes gradientAnimation {
+  0% {
+      background-position: 50% 0%;
+  }
+  50% {
+      background-position: 50% 100%;
+  }
+  100% {
+      background-position: 50% 0%;
+  }
+}
+nav a:hover{
+  color: #d1d0d0 !important;
+  text-shadow: 2px 3px 2px #9245e3
+}
+.bg-image {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -3;
+  opacity: 0.2;
+}
+.test-input{
+  width: 100% !important;
+  width: 375px !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  gap: 2rem;
+
+}
+#loginBox{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+#registerBox{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-floating{
+    margin-bottom: 30px;
+    width: 375px;
+}
+
+/* Google Font CSS */
+.playwrite-au-nsw-text {
+font-family: "Playwrite AU NSW", cursive;
+font-optical-sizing: auto;
+font-weight: 200;
+font-style: normal;
 }
