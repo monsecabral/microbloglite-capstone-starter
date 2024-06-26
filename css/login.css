@@ -17,7 +17,7 @@ body{
   }
 }
 nav a:hover{
-  color: #d1d0d0 !important;
+  color: #ffe8fb !important;
   text-shadow: 2px 3px 2px #9245e3
 }
 .bg-image {
@@ -27,7 +27,7 @@ nav a:hover{
   min-width: 100%; 
   min-height: 100%;
   z-index: -3;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 .test-input{
   width: 100% !important;

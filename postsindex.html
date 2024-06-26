@@ -1,6 +1,7 @@
 <!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,35 +13,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/posts.css">
 
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="../global.css">
-
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="./posts.css">
-
-    <title>/POSTS</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+NSW:wght@100..400&display=swap" rel="stylesheet">
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
-    <script src="../scripts/auth.js"></script>
+    <script src="./scripts/auth.js"></script>
     <script>
         if (isLoggedIn() === false) window.location.replace("/");
     </script>
-</head>
-<body>
 
-    <header>
-        <h1>POSTS PAGE</h1>
+    <!-- Navbar -->
+    <header class="mb-auto">
+        <div class="d-flex justify-content-around align-items-center">
+            <h3 class=" mb-0 playwrite-au-nsw-text" style="color: white;"> <img
+                    src="images/PinCushionLogo-removebg-preview.png" alt="Pincushion Logo" id="pincushionLogo"
+                    width="100px"><a href="postsindex.html" style="text-decoration: none; color: white !important;">The
+                    Sewing Club</a></h3>
+            <nav class="nav nav-masthead justify-content-center playwrite-au-nsw-text">
+                <a class="nav-link fw-bold py-1 px-2 active" aria-current="page" href="postsindex.html"
+                    style="color: white;">Posts</a>
+                <a class="nav-link fw-bold py-1 px-2" style="color: white;" href="profileindex.html">Profile</a>
+                <a class="nav-link fw-bold py-1 px-2" style="color: white;" button id="logoutButton">Logout</a>
+            </nav>
+        </div>
     </header>
+</head>
 
+<body>
     <main>
-<div>
-    <button id="logoutButton">Logout</button>
-</div>
-
-<!-- Card -->
-<div id="card-container"></div>
-
+        <!-- Card -->
+        <div class="container">
+            <div id="cardCreate"></div>
+        </div>
+        </div>
     </main>
 
     <footer></footer>
@@ -48,4 +59,5 @@
     <!-- Page-specific code -->
     <script src="scripts/postsindex.js"></script>
 </body>
+
 </html>
