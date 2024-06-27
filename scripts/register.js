@@ -9,20 +9,28 @@ const passwordField = document.getElementById("passwordField");
 // buttons
 const createAccountButton = document.getElementById("createAccountButton");
 
-
-console.log("hello");
-
-
 window.onload = function (){
     createAccountButton.onclick = onClickedCreateAccountButton;
 };
 
 function onClickedCreateAccountButton (){
-    console.log("test button");
-    createUser().then(() =>{
-        window.location.href = "login.html"; //redirect to login page once user creates account
-    });
-    console.log("after submit");
+    createUser()
+    .then(response => {
+        if(response.ok){
+            window.location.href = "login.html"; //redirect to login page once the user account has been created.
+        }else{
+            return response.json().then(data => {
+                // https://stackoverflow.com/questions/9156176/what-is-the-difference-between-throw-new-error-and-throw-someobject
+                throw new Error(data.message);
+            })
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        console.error("Cannot create user Account", error);
+        alert("Error creating account " + error.message); //show error to the user
+    })
+
 };
 
 function createUser (){
@@ -31,14 +39,8 @@ function createUser (){
         fullName: document.getElementById("fullNameField").value,
         password: document.getElementById("passwordField").value, 
     }
-
-    fetch ("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users",{
+    return fetch ("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users",{
         method: "POST",
         body: JSON.stringify(userBodyData), headers:{"content-type": "application/JSON; charset=UTF-8"}
-    })
-
-    .then (response=>response.json())
-    .then (data=>{
-        console.log(data);
     })
 };
