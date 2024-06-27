@@ -2,11 +2,13 @@
 
 // buttons
 const logoutButton = document.getElementById("logoutButton");
+const submitButton = document.getElementById("submitButton");
 
 window.onload = function () {
   console.log("hello");
   logoutButton.onclick = onClickedLogoutButton;
-  getAllUsers();
+//   getAllUsers();
+ submitButton.onclick = onClickedSubmitButton;
 };
 
 function onClickedLogoutButton() {
@@ -17,7 +19,7 @@ function createPostForUser () {
     const loginToken = getLoginData();
 
     let postBody = {
-        "text": document.getElementById("createPost").value,
+        "text": document.getElementById("text").value,
     };
 
     const options = {
@@ -35,5 +37,10 @@ function createPostForUser () {
         .then(data => {
             console.log(data);
         })
-    // not done yet
+    
 };
+
+function onClickedSubmitButton () {
+    console.log("submit");
+    createPostForUser();
+}

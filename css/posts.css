@@ -1,8 +1,7 @@
 body {
   background-image: linear-gradient(rgb(103, 0, 141), #5d002b);
-  background-size: 1000% 1000%;
+  background-size: 1500% 1500%;
   animation: gradientAnimation 20s ease infinite;
-  z-index: 2;
 }
 
 @keyframes gradientAnimation {
