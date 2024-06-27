@@ -1,43 +1,33 @@
-body{
-    background-image: linear-gradient(rgb(255, 201, 238), #a92a9e);
-    background-size: 800% 800%;
-    animation: gradientAnimation 40s ease infinite;
-    z-index: 2;
+body {
+  background-image: linear-gradient(rgb(103, 0, 141), #5d002b);
+  background-size: 1000% 1000%;
+  animation: gradientAnimation 20s ease infinite;
+  z-index: 2;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 50% 0%;
   }
 
-  nav a:hover{
-    color: #ffe8fb !important;
-    text-shadow: 2px 3px 2px #9245e3
-  }
-  .bg-image {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    z-index: -3;
-    opacity: 0.3;
-  }
-  .test-input{
-    width: 100% !important;
-    width: 375px !important;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    gap: 2rem;
+  50% {
+    background-position: 50% 100%;
   }
 
-  .form-floating{
-      margin-bottom: 30px;
-      width: 375px;
+  100% {
+    background-position: 50% 0%;
   }
-  
-  /* Google Font CSS */
-  .playwrite-au-nsw-text {
+}
+
+nav a:hover {
+  color: #ffe8fb !important;
+  text-shadow: 2px 3px 2px #9245e3
+}
+
+/* Google Font CSS */
+.playwrite-au-nsw-text {
   font-family: "Playwrite AU NSW", cursive !important;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  }
-
-  
+}

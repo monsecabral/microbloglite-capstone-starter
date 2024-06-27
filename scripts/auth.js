@@ -13,7 +13,7 @@ const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
 function getLoginData () {
     const loginJSON = window.localStorage.getItem("login-data");
     return JSON.parse(loginJSON) || {};
-}
+};
 
 
 // You can use this function to see whether the current visitor is
@@ -21,7 +21,7 @@ function getLoginData () {
 function isLoggedIn () {
     const loginData = getLoginData();
     return Boolean(loginData.token);
-}
+};
 
 
 // This function is already being used in the starter code for the
@@ -50,14 +50,14 @@ function login (loginData) {
                 // or other visible indicator to the page so that the user is  
                 // informed that they have entered the wrong login info.
                 return null
-            }
+            };
 
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
             window.location.assign("/postsindex.html");  // redirect
 
             return loginData;
         });
-}
+};
 
 
 // This is the `logout()` function you will use for any logout button
@@ -90,4 +90,4 @@ function logout () {
             window.localStorage.removeItem("login-data");  // remove login data from LocalStorage
             window.location.assign("/");  // redirect back to landing page
         });
-}
+};

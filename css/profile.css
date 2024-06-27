@@ -1,8 +1,6 @@
 body{
-    background-image: linear-gradient(rgb(255, 201, 238), #a92a9e);
-    background-size: 800% 800%;
-    animation: gradientAnimation 40s ease infinite;
-    z-index: 2;
+    background-image: linear-gradient(rgb(103, 0, 141), #5d002b);
+    background-size: 100% 100%;
   }
 
   nav a:hover{
@@ -62,4 +60,27 @@ body{
     height: 500px;
     width: 500px;
     background-color: white;
+  }
+
+/* Social media icons */
+  .fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  .fa-instagram {
+    background: #ff00d0;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
   }

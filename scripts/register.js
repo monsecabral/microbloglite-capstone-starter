@@ -16,12 +16,12 @@ console.log("hello");
 window.onload = function (){
     createAccountButton.onclick = onClickedCreateAccountButton;
 
-}
+};
 
 function onClickedCreateAccountButton (){
     console.log("test button");
     createUser();
-}
+};
 
 function createUser (){
     let userBodyData = {        
@@ -39,4 +39,4 @@ function createUser (){
     .then (data=>{
         console.log(data);
     })
-}
+};

@@ -13,7 +13,7 @@ window.onload = function () {
 
 function onClickedLogoutButton() {
   logout();
-}
+};
 
 function getAllUsers() {
   // GET /api/users

@@ -11,14 +11,14 @@ window.onload = function () {
 
 function onClickedLogoutButton() {
   logout();
-}
+};
 
 function createPostForUser () {
     const loginToken = getLoginData();
 
     let postBody = {
         "text": document.getElementById("createPost").value,
-    }
+    };
 
     const options = {
         method: "POST",
@@ -36,4 +36,4 @@ function createPostForUser () {
             console.log(data);
         })
     // not done yet
-}
+};
