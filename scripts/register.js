@@ -15,12 +15,14 @@ console.log("hello");
 
 window.onload = function (){
     createAccountButton.onclick = onClickedCreateAccountButton;
-
 };
 
 function onClickedCreateAccountButton (){
     console.log("test button");
-    createUser();
+    createUser().then(() =>{
+        window.location.href = "login.html"; //redirect to login page once user creates account
+    });
+    console.log("after submit");
 };
 
 function createUser (){

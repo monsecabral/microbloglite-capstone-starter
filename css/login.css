@@ -64,6 +64,16 @@ nav a:hover{
     width: 375px;
 }
 
+.container{
+position: absolute;
+bottom: 0px;
+height: 200px;
+margin-left: 625px;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
 /* Google Font CSS */
 .playwrite-au-nsw-text {
 font-family: "Playwrite AU NSW", cursive;
